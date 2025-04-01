@@ -47,7 +47,14 @@ import colors from "assets/theme/base/colors";
 // Material Dashboard 2 React helper functions
 import rgba from "assets/theme/functions/rgba";
 
-ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend);
+ChartJS.register(
+  RadialLinearScale,
+  PointElement,
+  LineElement,
+  Filler,
+  Tooltip,
+  Legend,
+);
 
 function RadarChart({ icon, title, description, height, chart }) {
   const chartDatasets = chart.datasets
@@ -99,7 +106,7 @@ function RadarChart({ icon, title, description, height, chart }) {
             <Radar data={data} options={options} redraw />
           </MDBox>
         ),
-        [chart]
+        [chart],
       )}
     </MDBox>
   );

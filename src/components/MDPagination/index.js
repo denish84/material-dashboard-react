@@ -32,7 +32,10 @@ const MDPagination = forwardRef(
     const context = useContext(Context);
     const paginationSize = context ? context.size : null;
 
-    const value = useMemo(() => ({ variant, color, size }), [variant, color, size]);
+    const value = useMemo(
+      () => ({ variant, color, size }),
+      [variant, color, size],
+    );
 
     return (
       <Context.Provider value={value}>
@@ -60,7 +63,7 @@ const MDPagination = forwardRef(
         )}
       </Context.Provider>
     );
-  }
+  },
 );
 
 // Setting default values for the props of MDPagination

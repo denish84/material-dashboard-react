@@ -20,7 +20,13 @@ import PropTypes from "prop-types";
 
 // react-chartjs-2 components
 import { Bubble } from "react-chartjs-2";
-import { Chart as ChartJS, LinearScale, PointElement, Tooltip, Legend } from "chart.js";
+import {
+  Chart as ChartJS,
+  LinearScale,
+  PointElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
 
 // @mui material components
 import Card from "@mui/material/Card";
@@ -95,7 +101,7 @@ function BubbleChart({ icon, title, description, height, chart }) {
             <Bubble data={data} options={options} redraw />
           </MDBox>
         ),
-        [chart, height]
+        [chart, height],
       )}
     </MDBox>
   );

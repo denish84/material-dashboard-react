@@ -76,7 +76,7 @@ function PieChart({ icon, title, description, height, chart }) {
             <Pie data={data} options={options} redraw />
           </MDBox>
         ),
-        [chart, height]
+        [chart, height],
       )}
     </MDBox>
   );
@@ -110,7 +110,9 @@ PieChart.propTypes = {
   title: PropTypes.string,
   description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  chart: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.array, PropTypes.object])).isRequired,
+  chart: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+  ).isRequired,
 };
 
 export default PieChart;
